@@ -1,7 +1,7 @@
 import React from 'react';
-
-import { Card, Button, Modal } from 'react-bootstrap';
-
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Modal from 'react-bootstrap/Modal';
 
 
 class SelectedBeast extends React.Component {
@@ -18,7 +18,7 @@ class SelectedBeast extends React.Component {
       <Modal show={displayModal} onHide={this.props.hideModal}>
       <Modal.Dialog>
         <Modal.Header>
-          <h2>Lil Horned Beasties</h2>
+          <h2>loved Beasties</h2>
         </Modal.Header>
         <Modal.Body>
         <Card style={{ width: '26rem'}}>
@@ -36,5 +36,6 @@ class SelectedBeast extends React.Component {
     )
   }
 }
+
 
 export default SelectedBeast;

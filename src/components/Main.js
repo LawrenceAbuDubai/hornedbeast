@@ -1,4 +1,5 @@
 import HornedBeast from './HornedBeast.js';
+import HornCount from './HornCount.js';
 
 import React from 'react';
 import Card from 'react-bootstrap/Card'
@@ -8,6 +9,9 @@ class Main extends React.Component {
   render() {
     return (
       <div>
+        <HornCount
+          presentFancyBeasts={this.props.presentFancyBeasts} 
+        />
         <Card> 
           {this.props.beasts.map((thisLilBeastie, index) => {
             return (
@@ -17,6 +21,7 @@ class Main extends React.Component {
                   title={thisLilBeastie.title}
                   img={thisLilBeastie.image_url}
                   description={thisLilBeastie.description}
+                  horns={thisLilBeastie.horns}
                 />
               </div>
             )
